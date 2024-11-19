@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: none; /* Hide content initially */
+            position: relative; /* Ensure the body is positioned for absolute elements */
+            min-height: 100vh; /* Ensures the body takes at least the full height of the viewport */
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .option {
+            display: block; /* Make the anchor a block element */
+            background-color: #007BFF;
+            color: white;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .option:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            position: absolute; /* Positioning the footer */
+            bottom: 10px; /* Distance from the bottom */
+            left: 20px; /* Distance from the left */
+            color: #333; /* Color of the text */
+            font-size: 14px; /* Font size */
+        }
+    </style>
+    <script>
+        // Function to check password
+        function checkPassword() {
+            const password = prompt("Please enter the password:");
+            const correctPassword = "APS"; // Password set to "APS"
+
+            if (password === correctPassword) {
+                document.body.style.display = "block"; // Show content
+            } else {
+                alert("Incorrect password. Access denied.");
+                window.location.href = "about:blank"; // Redirect to a blank page
+            }
+        }
+    </script>
+</head>
+<body onload="checkPassword()">
+
+    <div class="container">
+        <h1>Select Your Teaching Option</h1>
+        <a href="https://shaikhhaareess.github.io/leave-application-PGT/" class="option" target="_blank">PGT (Post Graduate Teacher)</a>
+        <a href="https://shaikhhaareess.github.io/LEAVE-APPLICATION-TGT/" class="option" target="_blank">TGT (Trained Graduate Teacher)</a>
+        <a href="https://shaikhhaareess.github.io/LEAVE-APPLICATION-PRT/" class="option" target="_blank">PRT (Primary Teacher)</a>
+    </div>
+
+    <div class="footer">Made by Shaikh Haareess</div>
+
+</body>
+</html>
